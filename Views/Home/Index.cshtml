@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Trabalho .NET</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Lista de Produtos</h2>
+        @{Html.RenderAction("ListaProdutos", "Produto", new { max = 5});}
+        <p>
+            @Html.ActionLink("Listar todos","Index","Produto",null,new { @class="btn btn-info"})
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h2>Lista de Fornecedores</h2>
+       @{Html.RenderAction("ListaFornecedor", "Fornecedor", new { max = 5 });}
+        <p>
+            @Html.ActionLink("Listar todos", "Index", "Produto", null, new { @class = "btn btn-info" })
+        </p>
+    </div>
+   
+</div>

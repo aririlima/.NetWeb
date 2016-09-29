@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Arianna_Lima_av1.Models.Fornecedor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Fornecedores</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Cadastrar")
+</p>
+
+@{Html.RenderAction("ListaFornecedor");}
